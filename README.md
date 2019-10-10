@@ -12,12 +12,16 @@ Integrantes do grupo: Jenilson de Moraes, José Luciano, José Everton.
 Disciplina: Engenharia de Software 2019.2.
 Professor: Rodrigo Andrade.
 
+
 ● Projeto 
 A criação de um sistema para uma distribuidora de bebidas, com o intuito de realizar vendas e ter um controle de entradas e saídas dos produtos, como foi escolhido pelo cliente.
+
 ● Público alvo 
 Funcionários e clientes da distribuidora de bebidas. 
+
 ● Requisitos do cliente 
 O cliente solicita que seja possível realizar o cadastro dos clientes, produtos, funcionários, assim como também, poder alterá-los e serem removidos. Pede também que seja possível visualizar suas vendas e ter todo o controle de estoque.
+
 ● O que será feito 
 - Perfis (CRUD Usuário) 
 Haverá o perfil de administrador e o perfil de vendedor. No perfil de vendedor terá controle sobre pedidos (criar, visualizar, alterar e apagar), visualizar produtos e estoque.
@@ -28,6 +32,7 @@ Será possível cadastrar clientes para que possam ser feitos os pedidos à dist
 O vendedor visitará o cliente em seus pontos de venda e realizará o pedido. Pedidos anteriores poderão ser visualizados, após realizado o pedido esse será salvo no sistema e será visualizado por o administrador e impresso para entrega.
 - Produtos (CRUD Produtos)
 	O perfil de administrador do sistema terá todo o controle dos produtos,  podendo assim, cadastrar, alterar e remover um produto.
+
 ● Extras (O que poderá vir a ser implementado, foi dado como ideia pelo cliente) 
 Status de entrega de pedidos
 Visualizar produtos que possuem pouca venda.
