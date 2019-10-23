@@ -13,12 +13,20 @@
 
   <div class="field">
     <%= form.label :usuario_id %>
-    <%= form.text_field :usuario_id, id: :pedido_usuario_id %>
+    <%= form.select(:usuario_id) do %>
+      <% @usuarios.each do |u| %>
+        <%= content_tag(:option, u.nome, value: u.id) %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="field">
-    <%= form.label :produto_id %>
-    <%= form.text_field :produto_id, id: :pedido_produto_id %>
+    <%= form.label :produtos_id %>
+    <%= form.select(:produtos_id) do %>
+      <% @produtos.each do |p| %>
+        <%= content_tag(:option, p.nome, value: p.id) %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="field">
