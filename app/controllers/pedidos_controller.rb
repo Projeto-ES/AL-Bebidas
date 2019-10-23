@@ -15,6 +15,8 @@ class PedidosController < ApplicationController
   # GET /pedidos/new
   def new
     @pedido = Pedido.new
+    @produtos = Produto.all
+    @usuarios = Usuario.all
   end
 
   # GET /pedidos/1/edit

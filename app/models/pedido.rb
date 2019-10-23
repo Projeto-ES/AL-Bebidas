@@ -1,4 +1,4 @@
 class Pedido < ApplicationRecord
   belongs_to :usuario
-  belongs_to :produto
+  has_many(:produto)
 end
