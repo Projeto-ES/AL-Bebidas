@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20191023193607) do
 
   create_table "pedidos", force: :cascade do |t|
-      t.integer "usuario_id"
+    t.integer "usuario_id"
     t.integer "produtos_id"
     t.integer "quantidade"
     t.float "valorTotal"

@@ -1,13 +1,4 @@
 class Usuario < ApplicationRecord
-  attr_accessor :nome, :cpf, :login, :senha, :cargo
-
-  def initialize(nome, cpf, login, senha, cargo)
-    @nome = nome
-    @cpf = cpf
-    @login = login
-    @senha = senha
-    @cargo = cargo
-  end
 
   has_many(:pedidos)
   validates :cpf, presence: true,
@@ -17,7 +8,4 @@ class Usuario < ApplicationRecord
   validates :senha, presence: true
   validates :cargo, presence: true
 
-  def nome
-    :nome
-  end
 end
