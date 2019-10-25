@@ -16,7 +16,7 @@ Feature: Usuário
     And Eu crio um usuario com nome "Felipe", cpf "9765", login "felipe", senha "12345" e cargo "vendedor"
     And Eu clico em criar usuario
     Then Eu visualizo que o campo cpf esta invalido
-    
+
 
 
 
