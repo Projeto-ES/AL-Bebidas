@@ -22,3 +22,24 @@ end
 Then("Eu vejo que o usuario com nome {string} foi cadastrado corretamente") do |nome|
   expect(page).to have_content(nome)
 end
+
+And("Eu visualizo o usuario com nome {string} e cpf {string}") do |nome,cpf|
+  expect(page).to have_content(nome)
+  expect(page).to have_content(cpf)
+end
+
+When("eu clico em alterar") do
+  click_link 'Alterar'
+end
+
+And("eu altero o campo senha para {string}") do |senha|
+  fill_in 'usuario[senha]', :with => senha
+end
+
+And("Eu clico em alterar usuario") do
+  click_button 'Alterar Usuario'
+end
+
+Then("Eu vejo que o usuario com nome {string} foi alterado com sucesso") do |nome|
+  expect(page).to have_content(nome)
+end
