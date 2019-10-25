@@ -10,5 +10,11 @@ Feature: Usuário
     And Eu clico em criar usuario
     Then Eu vejo que o usuario com nome "Marcos" foi cadastrado corretamente
 
-
+  Scenario: alterar usuario
+    Given Eu estou na pagina de usuarios
+    And Eu visualizo o usuario com nome "Marcos" e cpf "87674583732"
+    When eu clico em alterar
+    And eu altero o campo senha para "12345"
+    And eu clico em alterar usuario
+    Then Eu vejo que o usuario com nome "Marcos" foi alterado com sucesso
 
