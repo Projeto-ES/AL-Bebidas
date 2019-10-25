@@ -22,3 +22,8 @@ end
 Then("Eu vejo que o usuario com nome {string} foi cadastrado corretamente") do |nome|
   expect(page).to have_content(nome)
 end
+
+
+Then("Eu visualizo que o campo cpf esta invalido") do
+end
+
