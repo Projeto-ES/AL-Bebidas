@@ -23,7 +23,7 @@
         <td><%= usuario.senha %></td>
         <td><%= usuario.cargo %></td>
         <td><%= link_to 'Vizualizar', usuario, id: "v-#{usuario.cpf}"%></td>
-        <td><%= link_to 'Alterar', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Alterar', edit_usuario_path(usuario), id: "e-#{usuario.cpf}" %></td>
         <td><%= link_to 'Remover', usuario, method: :delete, id:"r-#{usuario.cpf}"%></td>
       </tr>
     <% end %>

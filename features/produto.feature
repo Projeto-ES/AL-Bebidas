@@ -15,6 +15,14 @@ Feature: Produto
     When Eu clico em remover o produto de nome "Fanta"
     Then Eu vejo uma mensagem que o produto foi removido com sucesso
 
+  Scenario: alterar produto
+    Given Eu estou na pagina de produtos
+    And O produto de codigo "10", nome "Suco" e valor "6.0" existe
+    When Eu clico em alterar o produto de nome "Suco"
+    And Eu altero o nome para "Sucos"
+    And Eu clico em alterar produto
+    Then Eu vejo que o produto foi alterado com sucesso
+
   Scenario: cadastrar produto
     Given Eu estou na pagina de produtos
     When Eu clico em novo produto
