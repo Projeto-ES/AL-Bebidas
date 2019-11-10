@@ -20,7 +20,7 @@
         <td><%= produto.valor %></td>
         <td><%= link_to 'Vizualizar', produto %></td>
         <td><%= link_to 'Alterar', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Remover', produto, method: :delete, data: { confirm: 'Deseja realmente remover?' } %></td>
+        <td><%= link_to 'Remover', produto, method: :delete%></td>
       </tr>
     <% end %>
   </tbody>
