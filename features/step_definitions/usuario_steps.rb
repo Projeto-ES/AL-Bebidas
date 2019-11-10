@@ -62,3 +62,18 @@ end
 
 Then("Eu vejo uma mensagem que o usuario foi removido com sucesso") do
 end
+
+When("Eu clico em alterar o usuario de cpf {string}") do |cpf|
+  click_link "e-#{cpf}"
+end
+
+And("Eu altero o campo nome para {string}") do |nome|
+  fill_in 'usuario[nome]', :with => nome
+end
+
+And("Eu clico em alterar")do
+  click_button 'Criar Usuario'
+end
+
+Then("Eu vejo que o usuario foi alterado com sucesso") do
+end

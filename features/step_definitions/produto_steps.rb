@@ -26,6 +26,21 @@ end
 Then("Eu vejo uma mensagem que o produto foi removido com sucesso")do
 end
 
+When("Eu clico em alterar o produto de nome {string}") do |nome|
+  click_link "e-#{nome}"
+end
+
+And("Eu altero o nome para {string}") do |nome|
+  fill_in 'produto[nome]', :with => nome
+end
+
+And("Eu clico em alterar produto")do
+  click_button 'Update Produto'
+end
+
+Then("Eu vejo que o produto foi alterado com sucesso") do
+end
+
 When("Eu clico em novo produto")do
   click_link 'Novo Produto'
 end
@@ -51,3 +66,4 @@ end
 
 Then("Eu visualizo que o campo valor esta invalido") do
 end
+

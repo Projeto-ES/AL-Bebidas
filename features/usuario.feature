@@ -57,4 +57,12 @@ Feature: Usuário
     When Eu clico em remover o usuario com cpf "86757694756"
     Then Eu vejo uma mensagem que o usuario foi removido com sucesso
 
+  Scenario: alterar usuario
+    Given Eu estou na pagina de usuarios
+    And O usuario de nome "Roberto", cpf "86153694756", login "roberto", senha "0039495" e cargo "Vendedor" existe
+    When Eu clico em alterar o usuario de cpf "86153694756"
+    And Eu altero o campo nome para "Roberto Carlos"
+    And Eu clico em alterar
+    Then Eu vejo que o usuario foi alterado com sucesso
+
 
