@@ -24,7 +24,7 @@
         <td><%= usuario.cargo %></td>
         <td><%= link_to 'Vizualizar', usuario %></td>
         <td><%= link_to 'Alterar', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Remover', usuario, method: :delete, data: { confirm: 'Deseja realmente remover?' } %></td>
+        <td><%= link_to 'Remover', usuario, method: :delete%></td>
       </tr>
     <% end %>
   </tbody>
