@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191023193607) do
+ActiveRecord::Schema.define(version: 20191110234558) do
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "cpf"
+    t.string "nome"
+    t.string "telefone"
+    t.string "rua"
+    t.string "numero"
+    t.string "bairro"
+    t.string "cidade"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pedidos", force: :cascade do |t|
     t.integer "usuario_id"
