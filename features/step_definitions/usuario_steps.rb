@@ -77,3 +77,6 @@ end
 
 Then("Eu vejo que o usuario foi alterado com sucesso") do
 end
+
+Then("Eu vejo a mensagem informando que o campo nome deve ser preenchido") do
+end

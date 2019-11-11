@@ -65,4 +65,11 @@ Feature: Usuário
     And Eu clico em alterar
     Then Eu vejo que o usuario foi alterado com sucesso
 
+  Scenario: alterar usuario com campo nome invalido
+    Given Eu estou na pagina de usuarios
+    And O usuario de nome "Roberto", cpf "86153694756", login "roberto", senha "0039495" e cargo "Vendedor" existe
+    When Eu clico em alterar o usuario de cpf "86153694756"
+    And Eu altero o campo nome para ""
+    And Eu clico em alterar
+    Then Eu vejo a mensagem informando que o campo nome deve ser preenchido
 
