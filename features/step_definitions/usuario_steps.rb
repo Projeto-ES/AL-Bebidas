@@ -52,7 +52,8 @@ end
 When ("Eu clico em visualizar o usuario de cpf {string}") do |cpf|
   click_link "v-#{cpf}"
 end
-Then ("Eu vejo todas as informações do usuario de cpf {string}") do |cpf|
+
+Then ("Eu vejo todas as informacoes do usuario de cpf {string}") do |cpf|
   expect(page).to have_content(cpf)
 end
 
