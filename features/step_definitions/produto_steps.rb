@@ -41,6 +41,17 @@ end
 Then("Eu vejo que o produto foi alterado com sucesso") do
 end
 
+Then("Eu vejo a mensagem informando que o nome deve ser preenchido")do
+end
+
+And("Eu altero o valor para {string}") do |valor|
+  fill_in 'produto[valor]', :with => valor
+end
+
+Then("Eu vejo a mensagem informando que o valor deve ser preenchido")do
+end
+
+
 When("Eu clico em novo produto")do
   click_link 'Novo Produto'
 end

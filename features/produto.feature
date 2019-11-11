@@ -23,6 +23,22 @@ Feature: Produto
     And Eu clico em alterar produto
     Then Eu vejo que o produto foi alterado com sucesso
 
+  Scenario: alterar produto com campo nome invalido
+    Given Eu estou na pagina de produtos
+    And O produto de codigo "10", nome "Suco" e valor "6.0" existe
+    When Eu clico em alterar o produto de nome "Suco"
+    And Eu altero o nome para ""
+    And Eu clico em alterar produto
+    Then Eu vejo a mensagem informando que o nome deve ser preenchido
+
+  Scenario: alterar produto com campo valor invalido
+    Given Eu estou na pagina de produtos
+    And O produto de codigo "10", nome "Suco" e valor "6.0" existe
+    When Eu clico em alterar o produto de nome "Suco"
+    And Eu altero o valor para ""
+    And Eu clico em alterar produto
+    Then Eu vejo a mensagem informando que o valor deve ser preenchido
+
   Scenario: cadastrar produto
     Given Eu estou na pagina de produtos
     When Eu clico em novo produto
