@@ -26,9 +26,9 @@
         <td><%= cliente.numero %></td>
         <td><%= cliente.bairro %></td>
         <td><%= cliente.cidade %></td>
-        <td><%= link_to 'Show', cliente %></td>
-        <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-        <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Visualizar', cliente, id: "v-#{cliente.cpf}" %></td>
+        <td><%= link_to 'Alterar', edit_cliente_path(cliente), id: "e-#{cliente.cpf}" %></td>
+        <td><%= link_to 'Deletar', cliente, method: :delete, id: "d-#{cliente.cpf}"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Novo Cliente', new_cliente_path %>

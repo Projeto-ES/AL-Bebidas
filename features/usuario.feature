@@ -49,7 +49,7 @@ Feature: Usuário
     Given Eu estou na pagina de usuarios
     And O usuario de nome "Vinicius", cpf "86757694756", login "vinicius", senha "00112233" e cargo "Vendedor" existe
     When Eu clico em visualizar o usuario de cpf "86757694756"
-    Then Eu vejo todas as informações do usuario de cpf "86757694756"
+    Then Eu vejo todas as informacoes do usuario de cpf "86757694756"
 
   Scenario: remover um usuario existente
     Given Eu estou na pagina de usuarios
